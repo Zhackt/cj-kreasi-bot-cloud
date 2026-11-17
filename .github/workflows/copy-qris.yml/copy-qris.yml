@@ -1,0 +1,38 @@
+name: Copy qris.png
+
+on:
+  workflow_dispatch:
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download qris.png dari repo lama
+        run: curl -L -o qris.png https://github.com/Zhackt/cj-kreasi-bot/raw/main/qris.png && ls -l qris.png && file qris.png
+      - name: Commit qris.png
+        run: |
+          git config user.name "Zhackt"
+          git config user.email "zhackt@users.noreply.github.com"
+          git add qris.png
+          git commit -m "Add qris.png from Zhackt/cj-kreasi-bot" || echo "nothing to commit"
+          git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
