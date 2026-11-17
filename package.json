@@ -1,0 +1,1 @@
+{"description":"Bot WhatsApp CJ Kreasi via WhatsApp Cloud API resmi (Meta). Port dari bot Baileys.","engines":{"node":">=18"},"main":"index.js","name":"cj-kreasi-bot-cloud","scripts":{"start":"node index.js"},"version":"1.0.0"}
